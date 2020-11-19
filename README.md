@@ -26,7 +26,7 @@ Copy and edit the [book-template.tex](book-template.tex) and [book-template-cove
 
 For a book cover, use either the [book-template-cover.tex](book-template-cover.tex) template, or uncomment the full-page image inclusion commands in the main template.
 
-The main template uses a modular, extensible format: the convention is to place the individual chapters in a related folder (e.g., [book-template](book-template)) and use the [\subimport{book-template/}{file.tex}](https://ctan.org/pkg/import) to include them, though that is optional.
+The main template uses a modular, extensible format: the convention is to place the individual chapters in a related folder (e.g., [book-template](book-template)) and use the [\subimport{book-template/}{file.tex}](https://ctan.org/pkg/import) command to include them, though that is optional.
 
 It is possible to keep all the content in the main template file itself instead.
 
@@ -57,6 +57,6 @@ make clean
 
 ## Useful resources
 * If you are new to LaTeX, I'll strongly recommend that you use [Gummi](http://gummi.midnightcoding.org/) and [LaTeXila](http://projects.gnome.org/latexila/) LaTeX editors together to edit LaTeX files. I especially like the "[Live Preview](http://dev.midnightcoding.org/attachments/download/241/gummi060-1.png)" option of [Gummi](http://gummi.midnightcoding.org/) which shows the PDF preview in real-time (correspoding to the LaTeX source edits made by the user).
-* Documentation on how to use LaTeX can be found both [here](http://latex-project.org/guides/) and [here](http://latex-project.org/guides/).
+* Documentation on how to use LaTeX can be found both [here](http://latex-project.org/guides/) and [here](https://en.wikibooks.org/wiki/LaTeX).
 * [Books about TeX and Friends](http://www.tug.org/books/) webpage on _TeX Users Group_ website.
 * Free, community driven Q&A for users of TeX, LaTeX, ConTeXt, and related typesetting systems (part of the Stack Exchange network of Q&A websites): [http://tex.stackexchange.com/](http://tex.stackexchange.com/)
