@@ -1,10 +1,9 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% LaTeX book template                           %%
-%% Author:  Amber Jain (http://amberj.devio.us/) %%
-%% License: ISC license                          %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX book template
+%% Author:  Amber Jain (http://amberj.devio.us/)
+%% License: ISC license (https://www.isc.org/licenses/)
 
-\documentclass[a4paper,11pt]{book}
+\documentclass[a4paper,11pt]{book}  % more options: https://en.wikibooks.org/wiki/LaTeX/Page_Layout
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -13,10 +12,10 @@
 \usepackage{graphicx}
 \usepackage[english]{babel}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 'dedication' environment: To add a dedication paragraph at the start of book %
-% Source: http://www.tug.org/pipermail/texhax/2010-June/015184.html            %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 'dedication' environment: To add a dedication paragraph at the start
+%% http://www.tug.org/pipermail/texhax/2010-June/015184.html
+
 \newenvironment{dedication}
 {
    \cleardoublepage
@@ -31,10 +30,10 @@
    \clearpage
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Chapter quote at the start of chapter        %
-% Source: http://tex.stackexchange.com/a/53380 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Chapter quote at the start of chapter
+%% http://tex.stackexchange.com/a/53380
+
 \makeatletter
 \renewcommand{\@chapapp}{}% Not necessary...
 \newenvironment{chapquote}[2][2em]
@@ -45,33 +44,35 @@
   {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
 \makeatother
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% First page of book which contains 'stuff' like: %
-%  - Book title, subtitle                         %
-%  - Book author name                             %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Book's title and subtitle
+%% First page of book which contains 'stuff' like:
+%%  - Book title, subtitle
+%%  - Book author name
+
 \title{\Huge \textbf{Sample Book Title}  \footnote{This is a footnote.} \\ \huge Sample book subtitle \footnote{This is yet another footnote.}}
-% Author
+
 \author{\textsc{First-name Last-name}\thanks{\url{www.example.com}}}
 
+
+%% Content starts here
 
 \begin{document}
 
 \frontmatter
 \maketitle
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Add a dedication paragraph to dedicate your book to someone %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% example of how to use the 'dedication' environment defined earlier
+%% (having a dedication section like this is optional)
+
 \begin{dedication}
 Dedicated to Calvin and Hobbes.
 \end{dedication}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Auto-generated table of contents, list of figures and list of tables %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Auto-generated table of contents, list of figures and list of tables
+%% (each of these is optional)
+
 \tableofcontents
 \listoffigures
 \listoftables
@@ -80,6 +81,8 @@ Dedicated to Calvin and Hobbes.
 
 \subimport{book-template/}{preface.tex}
 \subimport{book-template/}{chapter-one.tex}
-% etc. add more content here
+
+%% etc. add more content by writing new tex files in 'book-template/'
+%% and include their corresponding imports here
 
 \end{document}
